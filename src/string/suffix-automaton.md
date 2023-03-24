@@ -701,8 +701,8 @@ string lcs (string S, string T) {
     int v = 0, l = 0, best = 0, bestpos = 0;
     for (int i = 0; i < T.size(); i++) {
         while (v && !st[v].next.count(T[i])) {
-            v = st[v].link ;
-            l = st[v].length ;
+            v = st[v].link;
+            l = st[v].len;
         }
         if (st[v].next.count(T[i])) {
             v = st [v].next[T[i]];
